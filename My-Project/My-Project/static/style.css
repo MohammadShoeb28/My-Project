@@ -1,0 +1,215 @@
+/* ================= GLOBAL STYLE ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, #f4f6f9, #eaf1ff);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    background: #0b3d91;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+    transform: scale(1.05);
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #0b3d91, #2563eb);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ================= MAIN CONTAINER ================= */
+
+.container {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* ================= FORM ================= */
+
+input[type="file"] {
+    padding: 12px;
+    margin: 20px 0;
+    border: 2px dashed #2563eb;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: pointer;
+    width: 280px;
+}
+
+/* ================= BUTTON ================= */
+
+button {
+    padding: 12px 26px;
+    background: linear-gradient(135deg, #ffd700, #ffcc00);
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= RESULT BOX ================= */
+
+.result-box {
+    margin: 30px auto;
+    width: 65%;
+    min-height: 140px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
+    text-align: left;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.result-box:hover {
+    transform: scale(1.01);
+}
+
+/* ================= FEATURE / CARD STYLE ================= */
+
+.feature-card {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ================= ABOUT SECTION ================= */
+
+.about {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 17px;
+    color: #555;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    margin-top: 40px;
+    background: #0b3d91;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container,
+.hero,
+.feature-card,
+.result-box {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width:768px) {
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .result-box {
+        width: 90%;
+    }
+}
